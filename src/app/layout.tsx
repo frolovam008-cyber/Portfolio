@@ -24,7 +24,7 @@ export const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://portfolio-pi-seven-ow7qvbu0qu.vercel.app"),
 
   applicationName: "Marina Frolova Portfolio",
 

@@ -6,16 +6,20 @@ The project showcases my frontend development experience, commercial work, perso
 
 ---
 
-# 🚀 Live Demo
+# 🌐 Live Demo
 
-🔗 **Coming soon (Vercel)**
+<p align="center">
+  <a href="https://portfolio-pi-seven-ow7qvbu0qu.vercel.app">
+    Open Portfolio
+  </a>
+</p>
 
 ---
 
 # 📸 Preview
 
 <p align="center">
-  <img src="./public/images/portfolio-demo.gif" alt="Portfolio Demo" width="1000">
+  <img src="./public/images/og-image.png" alt="Portfolio image" width="1000">
 </p>
 
 ---
