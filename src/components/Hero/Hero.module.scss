@@ -1,0 +1,287 @@
+.hero {
+  position: relative;
+
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+
+  padding: 5% 5% 10%;
+
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 650px;
+}
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+
+.backgroundImage {
+  position: absolute;
+  z-index: 0;
+
+  top: 50%;
+  right: -5%;
+
+  width: 68%;
+  height: 90%;
+
+  transform: translateY(-50%);
+
+  opacity: 0.32;
+  pointer-events: none;
+  user-select: none;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 20%,
+    black 50%,
+    black 100%
+  );
+
+  img {
+    object-fit: contain;
+    object-position: center right;
+  }
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.text {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 760px;
+}
+
+.text h1 {
+  margin: 0 0 20px;
+
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.text p {
+  max-width: 600px;
+  margin: 0 0 28px;
+
+  font-size: 1.2rem;
+  line-height: 1.7;
+
+  opacity: 0.8;
+}
+
+/* =========================
+   MARQUEE
+========================= */
+
+.marqueeContainer {
+  width: 100%;
+  max-width: 700px;
+
+  margin-bottom: 35px;
+
+  overflow: hidden;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+
+  animation: scroll 14s linear infinite;
+}
+
+.content {
+  flex-shrink: 0;
+  padding-right: 12px;
+
+  white-space: nowrap;
+
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+
+  opacity: 0.75;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.actions {
+  display: flex;
+  gap: 16px;
+
+  width: 100%;
+  max-width: 460px;
+}
+
+.button {
+  flex: 1;
+
+  padding: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+
+  color: var(--text);
+  background: var(--button-bg);
+
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+
+  background: var(--surface-hover);
+  border-color: var(--border-hover);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 8rem 5% 5rem;
+  }
+
+  .container {
+    min-height: 600px;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .text {
+    max-width: 700px;
+  }
+
+  .text p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .marqueeContainer {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .actions {
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .backgroundImage {
+    top: 52%;
+    right: -25%;
+
+    width: 100%;
+    height: 80%;
+
+    opacity: 0.18;
+
+    mask-image: radial-gradient(
+      circle at center,
+      black 20%,
+      rgba(0, 0, 0, 0.5) 55%,
+      transparent 78%
+    );
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 100svh;
+
+    padding: 3.5rem 20px 4rem;
+  }
+
+  .container {
+    min-height: auto;
+  }
+
+  .text h1 {
+    font-size: clamp(2.4rem, 12vw, 3.8rem);
+  }
+
+  .text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .backgroundImage {
+    top: 55%;
+    right: -45%;
+
+    width: 140%;
+    height: 75%;
+
+    opacity: 0.12;
+  }
+
+  .content {
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+
+  .button {
+    transition: none;
+  }
+}

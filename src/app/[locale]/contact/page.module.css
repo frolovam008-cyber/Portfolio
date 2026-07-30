@@ -1,0 +1,42 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.5fr);
+  grid-template-areas:
+    "header header"
+    "info form";
+
+  column-gap: 64px;
+  row-gap: 48px;
+
+  padding: 80px 0;
+
+@media (max-width: 900px)  {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "info"
+      "form";
+
+    gap: 48px;
+  }
+}
+
+.pageHeader {
+  grid-area: header;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  max-width: 720px;
+}
+
+.info {
+  grid-area: info;
+  min-width: 0;
+}
+
+.form {
+  grid-area: form;
+  min-width: 0;
+}

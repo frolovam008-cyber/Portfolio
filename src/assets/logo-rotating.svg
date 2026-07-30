@@ -1,0 +1,103 @@
+<svg width="240" height="240" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="44" fill="#0B1220"/>
+
+  <defs>
+    <linearGradient id="frame1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <linearGradient id="frame2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+
+    <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      /* 🔷 ROTATING SYSTEM */
+      .system {
+        transform-origin: 100px 100px;
+        animation: rotateSystem 18s linear infinite;
+      }
+
+      .system2 {
+        transform-origin: 100px 100px;
+        animation: rotateSystemReverse 28s linear infinite;
+      }
+
+      .diamond1, .diamond2 {
+        fill: none;
+        stroke-width: 6;
+        opacity: 0.18;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        filter: url(#glow);
+      }
+
+      .diamond1 { stroke: url(#frame1); }
+      .diamond2 { stroke: url(#frame2); opacity: 0.14; }
+
+      /* MF stays stable */
+      .m, .f {
+        fill: none;
+        stroke-width: 14;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .m { stroke: url(#g1); }
+      .f { stroke: url(#g2); }
+
+      /* animations */
+      @keyframes rotateSystem {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+      }
+
+      @keyframes rotateSystemReverse {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(-360deg); }
+      }
+    </style>
+  </defs>
+
+  <!-- 🔷 ROTATING DIAMOND SYSTEM -->
+  <g class="system">
+    <path class="diamond1"
+          d="M100 20 L175 100 L100 180 L25 100 Z"/>
+  </g>
+
+  <g class="system2">
+    <path class="diamond2"
+          d="M110 30 L185 110 L110 190 L35 110 Z"/>
+  </g>
+
+  <!-- 🧠 STABLE CORE (MF) -->
+  <path class="m"
+        d="M50 150V60
+           L85 125
+           L120 60
+           L150 150"/>
+
+  <path class="f"
+        d="M115 150V60
+           H165
+           M115 110H155"/>
+</svg>

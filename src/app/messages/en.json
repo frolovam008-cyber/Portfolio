@@ -1,0 +1,167 @@
+{
+    "Navbar": {
+    "navigation": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  
+  "Hero": {
+    "title": "Frontend Developer",
+    "subtitle": "I build modern web applications with React, Next.js and TypeScript",
+    "projects": "Projects",
+    "contact": "Contact Me"
+  },
+
+ 
+  "About": {
+    "label": "About me",
+    "title": "I build modern web applications with thoughtful user interfaces",
+    "description": "Frontend Developer with hands-on experience using React, TypeScript and Next.js. I build responsive interfaces, component architecture and business logic, integrate applications with REST APIs and focus on performance and user experience.",
+    "frontendDescription": "Building modern SPA and SSR applications with reusable components and type-safe architecture.",
+    "commercialTitle": "Commercial Project",
+    "commercialDescription": "Hands-on experience developing interfaces, business logic, forms and API integrations for a real-world project.",
+    "fullstackTitle": "Fullstack Development",
+    "fullstackDescription": "Expanding my skills in backend development and database technologies.",
+    "downloadCv": "View CV"
+  },
+
+  
+  "Projects": {
+    "sectionTitle": "Projects",
+    "techStack": "Tech Stack",
+    "github": "GitHub",
+    "demo": "Live Demo",
+
+    "travelblog": {
+      "title": "TravelBlog",
+      "description": "Social platform for travelers with posts, comments and user profiles.",
+
+      "features": {
+        "1": "Authentication",
+        "2": "Post Creation",
+        "3": "Comments",
+        "4": "Profile Editing"
+      }
+    },
+
+    "vkmarusya": {
+      "title": "VK Marusya",
+      "description": "Movie discovery platform with genres, favorites and trailers.",
+
+      "features": {
+        "1": "Movie Search",
+        "2": "Favorites",
+        "3": "Genre Filtering",
+        "4": "Infinite Scroll"
+      }
+    },
+
+    "guessMelody": {
+      "title": "Guess The Melody",
+      "description": "Interactive music quiz with score tracking and host dashboard.",
+
+      "features": {
+        "1": "Game Logic",
+        "2": "Score Tracking",
+        "3": "Host Dashboard",
+        "4": "Winner Screen"
+      }
+    },
+
+    "audioPlayer": {
+      "title": "Audio Player",
+      "description": "Music application with authentication, favorites and playback controls.",
+
+      "features": {
+        "1": "Authentication",
+        "2": "Favorites",
+        "3": "Playback Control",
+        "4": "Pagination"
+      }
+    },
+
+    "briaton": {
+      "title": "Briaton Store",
+      "description": "Lighting e-commerce platform with catalog and shopping cart.",
+
+      "features": {
+        "1": "Product Filtering",
+        "2": "Sorting",
+        "3": "Shopping Cart",
+        "4": "Form Submission"
+      }
+    },
+
+    "crm": {
+      "title": "CRM System",
+      "description": "Client management system with search and sorting capabilities.",
+
+      "features": {
+        "1": "Create Clients",
+        "2": "Delete Clients",
+        "3": "Search",
+        "4": "Sorting"
+      }
+    }
+  },
+
+   "ContactInfo": {
+    "sectionLabel": "Contact information",
+    "email": "Email",
+    "location": "Location",
+    "locationValue": "New Zealand"
+  },
+  
+  "ContactForm": {
+    "sectionLabel": "Send a message",
+    "title": "Let's discuss your project",
+    "description": "Tell me a little about your idea, project or opportunity, and I will get back to you.",
+
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "name@example.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "What would you like to discuss?"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me about your project..."
+      }
+    },
+
+    "validation": {
+      "nameMin": "Name must contain at least 2 characters",
+      "nameMax": "Name must contain no more than 50 characters",
+      "emailInvalid": "Enter a valid email address",
+      "subjectMin": "Subject must contain at least 3 characters",
+      "subjectMax": "Subject must contain no more than 100 characters",
+      "messageMin": "Message must contain at least 10 characters",
+      "messageMax": "Message must contain no more than 1000 characters"
+    },
+
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "success": "Your message has been sent successfully.",
+    "error": "Something went wrong. Please try again.",
+    "ariaLabel": "Send contact message"
+  
+},
+ "Footer": {
+    "tagline": "Crafting modern web experiences.",
+    "builtWith": "Built with Next.js • React • TypeScript",
+    "copyright": "© {year} Marina Frolova",
+    "backToTop": "Back to top",
+    "github": "GitHub",
+    "email": "Email"
+  }
+
+}
